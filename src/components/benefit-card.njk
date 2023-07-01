@@ -1,7 +1,9 @@
-{% macro cardProps( imageAlt, title, subtitle) %}
-  <li>
-    <img src="" alt="{{ imageAlt }}"/>
-    <p>{{ title }}</p>
-    <p>{{ subtitle }}</p>
+{% macro cardProps( src, alt, title, subtitle) %}
+  <li class="block w-64 align-top mb-5 md:grow">
+    <img class="block mt-0 mx-auto mb-10 w-36 h-36" src="{{ src }}" alt="{{ alt }}"/>
+    <div class="xl:block xl:text-center my-4 w-full">
+      <p class="xl:mx-auto md:w-5/6 text-xl font-bold mb-3 ">{{ title }}</p>
+      <p>{{ subtitle }}</p>
+    </div>
   </li>
 {% endmacro %}

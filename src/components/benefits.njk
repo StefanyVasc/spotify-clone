@@ -1,4 +1,16 @@
-<section>
-  <h2>Por que ser Premium?</h2>
-  <ul></ul>
+<section class="container xl:w-1170 py-20 px-4 mx-auto ">
+  <h2 class="mx-auto mb-20 max-w-2xl text-4xl font-extrabold text-center">Por que ser Premium?</h2>
+  <ul class="flex flex-wrap lg:flex-nowrap">
+    {% import "./benefit-card.njk" as card %}
+    {% set cardData = [
+      {src: 'src/assets/offline-music.png', alt: 'música offline', title: 'Modo Offline', subtitle: 'Ouça música onde estiver.'},
+      {src: 'src/assets/no-adsense-music.png', alt: 'música sem anúncios', title: 'Ouça músicas sem anúncios.', subtitle: 'Curta música sem anúncios.'},
+      {src: 'src/assets/no-order-music.png', alt: 'música sem ordem de exibição', title: 'Ouça na ordem que quiser', subtitle: 'Qualquer música em qualquer ordem.'},
+      {src: 'src/assets/high-quality-music.svg', alt: 'qualidade de som superior', title: 'Qualidade de som superior', subtitle: 'Sinta o som.'}
+    
+    ] %}
+    {% for item in cardData %}
+      {{ card.cardProps(item.src, item.alt,item.title,item.subtitle) }}
+    {% endfor %}
+  </ul>
 </section>

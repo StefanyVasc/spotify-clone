@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,700&display=swap");
-
 @layer components {
   .nav-header-items {
     @apply block font-bold py-7 px-4 hover:text-green-400 cursor-pointer;
