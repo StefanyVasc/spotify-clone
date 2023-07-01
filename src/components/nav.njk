@@ -1,0 +1,17 @@
+<nav class="mr-4 inline-block font-normal text-base">
+    <ul id="navigation" class="flex">
+        {% for item in ['Premium', 'Suporte', 'Baixar', '|', 'Inscrever-se', 'Entrar'] %}
+            {% if item === '|' %}
+                <li role="separator" class="inline-block w-px my-auto mx-4">|</li>
+            {% elif item === 'Baixar' %}
+                <li class="nav-header-items text-green-400">
+                    <a href="/{{ item }}">{{ item }}</a>
+                </li>
+            {% else %}
+                <li class="nav-header-items">
+                    <a href="/{{ item }}">{{ item }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

@@ -1,0 +1,22 @@
+<section class="bg-blue-500">
+  <article class="h-auto flex flex-col mx-4 pt-20 pb-10 px-10 lg:w-1170">
+    <div>
+      <h1 class="text-white tracking-wide  text-4xl mb-7 font-extrabold leading-tight ">Aproveite 1 mês grátis de Premium</h1>
+      <h2 class="text-white tracking-wide text-2xl mb-7 font-light ">Depois, pague somente R$ 19,90/mês. Cancele quando
+        quiser.</h2>
+      <div class="flex">
+        {% block button %}
+          {% import "./button.njk" as button %}
+          {% set dataProps = [{content: 'comece agora', class: 'bg-slate-900 border-black mr-2'}, {content: 'ver planos', class: 'bg-transparent border-white'} ] %}
+          {% for data in dataProps %}
+            {{ button.buttonInfos(data.content, data.class) }}
+          {% endfor %}
+        {% endblock button %}
+      </div>
+      <p class="text-white tracking-wide mt-10 text-xs ">
+        <a href="#" class="underline">Sujeito a Termos e Condições.</a>
+        O mês grátis não está disponível para usuários que já experimentaram o Premium.
+      </p>
+    </div>
+  </article>
+</section>
